@@ -17,5 +17,19 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             InitializeComponent();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
