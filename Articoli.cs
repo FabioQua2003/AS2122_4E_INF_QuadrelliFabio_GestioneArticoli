@@ -18,10 +18,10 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
                 this.unitadimisura = unitadimisura;
                 this.prezzo = prezzo;
         }
-    
-    public string Codice { get { return codice; } };
-    public string Descrizione { get { return descrizione; } }
-    public string UnitaDiMisura { get { return unitadimisura; } }
-    public double Prezzo { get { return prezzo; } }
+
+        public string Codice { get { return codice; } }
+        public string descrizione { get { return descrizione; } }
+        public string UnitaDiMisura { get { return unitadimisura; } }
+        public double Prezzo { get { return prezzo; } }
     }
 }
