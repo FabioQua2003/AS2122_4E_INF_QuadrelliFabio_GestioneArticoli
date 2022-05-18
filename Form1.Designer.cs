@@ -29,10 +29,10 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtCodice = new System.Windows.Forms.Label();
+            this.txtDescrizione = new System.Windows.Forms.Label();
+            this.cmbunitaDiMisura = new System.Windows.Forms.Label();
+            this.txtPrezzo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -46,42 +46,45 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // txtCodice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codice";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.txtCodice.AutoSize = true;
+            this.txtCodice.Location = new System.Drawing.Point(45, 48);
+            this.txtCodice.Name = "txtCodice";
+            this.txtCodice.Size = new System.Drawing.Size(44, 15);
+            this.txtCodice.TabIndex = 0;
+            this.txtCodice.Text = "Codice";
+            this.txtCodice.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // txtDescrizione
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descrizione";
+            this.txtDescrizione.AutoSize = true;
+            this.txtDescrizione.Location = new System.Drawing.Point(40, 85);
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.Size = new System.Drawing.Size(67, 15);
+            this.txtDescrizione.TabIndex = 1;
+            this.txtDescrizione.Text = "Descrizione";
+            this.txtDescrizione.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // cmbunitaDiMisura
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Unità di misura";
+            this.cmbunitaDiMisura.AutoSize = true;
+            this.cmbunitaDiMisura.Location = new System.Drawing.Point(40, 118);
+            this.cmbunitaDiMisura.Name = "cmbunitaDiMisura";
+            this.cmbunitaDiMisura.Size = new System.Drawing.Size(87, 15);
+            this.cmbunitaDiMisura.TabIndex = 2;
+            this.cmbunitaDiMisura.Text = "Unità di misura";
+            this.cmbunitaDiMisura.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // txtPrezzo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Prezzo";
+            this.txtPrezzo.AutoSize = true;
+            this.txtPrezzo.Location = new System.Drawing.Point(40, 152);
+            this.txtPrezzo.Name = "txtPrezzo";
+            this.txtPrezzo.Size = new System.Drawing.Size(41, 15);
+            this.txtPrezzo.TabIndex = 3;
+            this.txtPrezzo.Text = "Prezzo";
+            this.txtPrezzo.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox1
             // 
@@ -89,6 +92,7 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -96,6 +100,7 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox4
             // 
@@ -103,6 +108,7 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // comboBox1
             // 
@@ -111,6 +117,7 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(48, 23);
             this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -120,16 +127,17 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
             this.button1.TabIndex = 9;
             this.button1.Text = "Aggiungi/modifica articolo";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtDescrizione);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtCodice);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cmbunitaDiMisura);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtPrezzo);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -197,10 +205,10 @@ namespace AS2122_4E_INF_QuadrelliFabio_GestioneArticoli
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtCodice;
+        private System.Windows.Forms.Label txtDescrizione;
+        private System.Windows.Forms.Label cmbunitaDiMisura;
+        private System.Windows.Forms.Label txtPrezzo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
